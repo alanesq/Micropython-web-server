@@ -19,11 +19,9 @@ async def mainloop():
     ntp_timer = time.ticks_ms()                # timer for periodic NTP time refresh
     while 1:                                   # loop forever
         
-        #sample code
+        #sample code  
         print("LED status = {}".format(led.value()))
-        print("Local time:", time.localtime()[3], time.localtime()[4], time.localtime()[5])
-    
-    
+        print("Local time is ", '%02d' % (time.localtime()[3]), ":", '%02d' % (time.localtime()[4]), ":", '%02d' % (time.localtime()[5]), sep="")
     
         
         # < your code here >
