@@ -68,29 +68,6 @@ gc.collect()
     
 
 # ----------------------------------------------
-# Main code running along side the web server
-# ----------------------------------------------
-
-async def maincode():
-    global led                                 # ensure the led variable used is the global one
-    while 1:                                   # loop forever
-        print("LED status = {}".format(led.value()))
-        print("Local time:", time.localtime()[3], time.localtime()[4], time.localtime()[5])
-        
-        
-        # < your code here >
-        
-        
-        
-        # if lose wifi connection, reboot
-        #if not wifi.isconnected():
-        #    machine.reset()
-            
-        await asyncio.sleep_ms(4000)           # yield point (wait 4 seconds)
-    
-
-
-# ----------------------------------------------
 # Set up the asyncio tasks
 # ----------------------------------------------
 # asyncio tutorial: https://www.youtube.com/watch?v=BI0asZuqFXM
